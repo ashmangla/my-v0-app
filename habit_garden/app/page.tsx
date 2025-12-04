@@ -353,7 +353,7 @@ export default function HabitGardenTracker() {
             </motion.div>
 
             <h1 className="text-6xl font-bold text-[#220C10] mb-6 text-balance text-center leading-tight">
-              Welcome to Your Garden
+              Welcome to Your Habit Garden
             </h1>
             <p className="text-2xl text-[#01497C] mb-16 text-center max-w-xl leading-relaxed">
               Start cultivating healthy habits today
@@ -372,7 +372,7 @@ export default function HabitGardenTracker() {
         ) : (
           <>
             <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
-              <h1 className="text-5xl font-bold text-[#220C10] mb-3 text-balance">Habit Garden</h1>
+              <h1 className="text-5xl font-bold text-[#220C10] mb-3 text-balance">Welcome to Your Habit Garden</h1>
               <p className="text-[#01497C] text-xl leading-relaxed">
                 Track your daily habits and watch your garden flourish
               </p>
