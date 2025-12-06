@@ -79,16 +79,7 @@ export function WeatherReport({ completionRate }: WeatherReportProps) {
                     ease: "linear",
                   }}
                 >
-                  <img
-                    src="/sun.png"
-                    alt="Sunny"
-                    className="w-28 h-28 drop-shadow-lg"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none"
-                      e.currentTarget.nextElementSibling?.classList.remove("hidden")
-                    }}
-                  />
-                  <Sun className="w-28 h-28 text-[#FFC800] hidden" />
+                  <Sun className="w-28 h-28 text-[#FFC800] drop-shadow-lg" />
                 </motion.div>
               )}
               {weather.icon === "cloudy" && (
