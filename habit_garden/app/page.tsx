@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Plus } from "lucide-react"
+import { Plus, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -337,19 +337,7 @@ export default function HabitGardenTracker() {
               }}
               className="mb-16"
             >
-              <img
-                src="/sun.png"
-                alt="Sun"
-                className="w-40 h-40 drop-shadow-lg"
-                onError={(e) => {
-                  // Fallback to emoji sun if image not found
-                  e.currentTarget.style.display = "none"
-                  const fallback = document.createElement("div")
-                  fallback.className = "text-9xl"
-                  fallback.textContent = "☀️"
-                  e.currentTarget.parentElement?.appendChild(fallback)
-                }}
-              />
+              <Sun className="w-40 h-40 text-[#FFC800] drop-shadow-lg" />
             </motion.div>
 
             <h1 className="text-6xl font-bold text-[#220C10] mb-6 text-balance text-center leading-tight">
@@ -410,17 +398,7 @@ export default function HabitGardenTracker() {
                 size="icon"
                 className="w-16 h-16 rounded-full shadow-xl border-2 border-[#FFC800] bg-[#FFC800] hover:bg-[#FFC800]/90 hover:border-[#FFC800] hover:shadow-2xl transition-all"
               >
-                <img
-                  src="/sun.png"
-                  alt="Add habit"
-                  className="w-8 h-8"
-                  onError={(e) => {
-                    // Fallback to icon if image not found
-                    e.currentTarget.style.display = "none"
-                    e.currentTarget.nextElementSibling?.classList.remove("hidden")
-                  }}
-                />
-                <Plus className="w-8 h-8 text-[#220C10] hidden" />
+                <Sun className="w-8 h-8 text-[#220C10]" />
               </Button>
             </motion.div>
           </>
